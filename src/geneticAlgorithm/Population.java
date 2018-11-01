@@ -9,14 +9,14 @@ public class Population {
     private int creaturesToKeep;
     private Creature[] creatures;
 
-    public Population(int width, int height, int numCreatures, int creaturesToKeep) {
+    public Population(int width, int height, double mutationChance, int numCreatures, int creaturesToKeep) {
         this.width = width;
         this.height = height;
         this.creaturesToKeep = creaturesToKeep;
         this.creatures = new Creature[numCreatures];
 
         for (int i = 0; i < numCreatures; i++) {
-            this.creatures[i] = new Creature(width, height);
+            this.creatures[i] = new Creature(width, height, mutationChance);
         }
     }
 

@@ -4,8 +4,8 @@ public class GeneticAlgorithm {
     private Population population;
     private int genNum;
 
-    public GeneticAlgorithm(int width, int height, int numCreatures, int creaturesToKeep) {
-        this.population = new Population(width, height, numCreatures, creaturesToKeep);
+    public GeneticAlgorithm(int width, int height, double mutationChance, int numCreatures, int creaturesToKeep) {
+        this.population = new Population(width, height, mutationChance, numCreatures, creaturesToKeep);
         this.genNum = 0;
     }
 

@@ -6,17 +6,20 @@ public class DNA {
     private static Random rand = new Random();
 
     private boolean[] sequence;
+    private double mutationChance;
     private int width;
     private int height;
 
-    public DNA(int width, boolean[] sequence) {
+    public DNA(int width, boolean[] sequence, double mutationChance) {
         this.sequence = sequence;
+        this.mutationChance = mutationChance;
         this.width = width;
         this.height = this.sequence.length / width;
     }
 
-    public DNA(int width, int height) {
+    public DNA(int width, int height, double mutationChance) {
         this.sequence = new boolean[width*height];
+        this.mutationChance = mutationChance;
         this.width = width;
         this.height = height;
 
@@ -38,9 +41,9 @@ public class DNA {
 
         for (int i = 0; i < this.sequence.length; i++) {
             boolean nextPiece = rand.nextBoolean() ? this.sequence[i] : other.sequence[i];
-            newSequence[i] = nextPiece;
+            newSequence[i] = (Math.random() < this.mutationChance) != nextPiece;
         }
 
-        return new DNA(this.width, newSequence);
+        return new DNA(this.width, newSequence, this.mutationChance);
     }
 }

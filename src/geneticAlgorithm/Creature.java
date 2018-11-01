@@ -6,10 +6,10 @@ public class Creature {
     private int height;
     double fitness;
 
-    public Creature(int width, int height) {
+    public Creature(int width, int height, double mutationChance) {
         this.width = width;
         this.height = height;
-        this.dna = new DNA(width, height);
+        this.dna = new DNA(width, height, mutationChance);
     }
 
     public Creature(int width, int height, DNA dna) {
