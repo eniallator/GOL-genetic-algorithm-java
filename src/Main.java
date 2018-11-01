@@ -1,19 +1,15 @@
 import GOL.GameOfLife;
+import geneticAlgorithm.DNA;
+import geneticAlgorithm.GeneticAlgorithm;
+
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-            boolean[][] startingCells = {
-                {false, true, false},
-                {true, true, false},
-                {false, true, true}
-        };
+        GOLGeneticAlgorithm genAlg = new GOLGeneticAlgorithm(5, 5, 50, 3);
 
-        GameOfLife gol = new GameOfLife(startingCells);
+        genAlg.cycleGenerations(50);
 
-        System.out.println(gol.toString());
-
-        gol.cycle();
-
-        System.out.println(gol.toString());
+        System.out.println(genAlg.getStats());
     }
 }

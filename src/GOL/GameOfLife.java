@@ -19,6 +19,10 @@ public class GameOfLife {
         }
     }
 
+    public int getAliveCells() {
+        return this.cells.size();
+    }
+
     private int getAliveNeighbours(int[] currCell) {
         int aliveNeighbours = 0;
         for (int[] otherCell : this.cells)
