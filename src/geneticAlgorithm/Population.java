@@ -123,4 +123,8 @@ public class Population {
 
         return builder.toString();
     }
+
+    public boolean[][] getBest() {
+        return this.creatures[this.creatures.length - 1].getSequence();
+    }
 }

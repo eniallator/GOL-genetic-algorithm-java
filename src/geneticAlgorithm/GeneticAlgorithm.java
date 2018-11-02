@@ -35,4 +35,8 @@ public class GeneticAlgorithm {
 
         return builder.toString();
     }
+
+    public boolean[][] getBestSequence() {
+        return this.population.getBest();
+    }
 }
