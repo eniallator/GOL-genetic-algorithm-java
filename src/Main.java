@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        GOLGeneticAlgorithm genAlg = new GOLGeneticAlgorithm(5, 5, 0.025, 50, 3);
+        GOLGeneticAlgorithm genAlg = new GOLGeneticAlgorithm(5, 5, 30, 0.025, 50, 3);
 
         genAlg.cycleGenerations(50);
 
