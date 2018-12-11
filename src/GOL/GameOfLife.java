@@ -7,13 +7,13 @@ public class GameOfLife {
     private ArrayList<int[]> cells;
 
     public GameOfLife(boolean[][] startingCells) {
-        cells = new ArrayList<>();
+        this.cells = new ArrayList<>();
 
         for (int i = 0; i < startingCells.length; i++) {
             for (int j = 0; j < startingCells[i].length; j++) {
                 if (startingCells[i][j]) {
                     int[] coords = {j, i};
-                    cells.add(coords);
+                    this.cells.add(coords);
                 }
             }
         }

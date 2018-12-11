@@ -36,7 +36,7 @@ public class Population {
 
     private Creature[] getOldBest() {
         Creature[] nextGen = new Creature[this.creatures.length];
-        System.arraycopy(creatures, 0, nextGen, 0, this.creaturesToKeep);
+        System.arraycopy(this.creatures, 0, nextGen, 0, this.creaturesToKeep);
         return nextGen;
     }
 
