@@ -1,5 +1,5 @@
 package geneticAlgorithm;
 
-public interface Runnable {
+public interface GenAlgRunnable {
     double getFitness(boolean[][] creature);
 }

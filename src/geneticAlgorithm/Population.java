@@ -76,7 +76,7 @@ public class Population {
         return matingPair;
     }
 
-    public void testCreatures(Runnable runnable) {
+    public void testCreatures(GenAlgRunnable runnable) {
         for (Creature creature : this.creatures)
             creature.testFitness(runnable);
     }

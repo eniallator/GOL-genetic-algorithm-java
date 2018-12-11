@@ -13,14 +13,14 @@ public class GeneticAlgorithm {
         return this.genNum;
     }
 
-    public void cycle(Runnable runnable) {
+    public void cycle(GenAlgRunnable runnable) {
         if (this.genNum > 0)
             this.population.newGeneration();
         this.population.testCreatures(runnable);
         this.genNum ++;
     }
 
-    public void cycle(Runnable runnable, int times) {
+    public void cycle(GenAlgRunnable runnable, int times) {
         for (int i = 0; i < times; i++) {
             System.out.println("Gen: " + this.genNum);
             this.cycle(runnable);

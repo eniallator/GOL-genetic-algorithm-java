@@ -23,7 +23,7 @@ public class Creature {
         return new Creature(this.width, this.height, childDNA);
     }
 
-    public void testFitness(Runnable runnable) {
+    public void testFitness(GenAlgRunnable runnable) {
         this.fitness = runnable.getFitness(this.dna.getSequence());
     }
 
