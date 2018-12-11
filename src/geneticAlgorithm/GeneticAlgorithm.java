@@ -28,12 +28,7 @@ public class GeneticAlgorithm {
     }
 
     public String stats() {
-        StringBuilder builder = new StringBuilder();
-
-        builder.append("Generation #" + this.genNum + "\r\n");
-        builder.append(this.population.getStats());
-
-        return builder.toString();
+        return "Generation #" + this.genNum + "\r\n" + this.population.getStats();
     }
 
     public boolean[][] getBestSequence() {
